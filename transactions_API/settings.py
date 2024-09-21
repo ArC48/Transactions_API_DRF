@@ -28,9 +28,9 @@ CSV_FILE_PATH = os.environ.get(
 SECRET_KEY = "django-insecure-zxc-(vnm&qwy!j#36znomgnucr+#1u=ssfnfd5)r3h6a8x-8ii"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "transactions-api-18d129667efe.herokuapp.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
