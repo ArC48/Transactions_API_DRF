@@ -11,7 +11,7 @@ def get_transactions(request):
     page_number = request.GET.get("page", 1)  # default page num is 1
     page_size = request.GET.get(
         "page_size", 10
-    )  # default page_size is 100 records per page
+    )  # default page_size is 10 records per page
 
     # Path to the CSV file
     csv_file_path = CSV_FILE_PATH
