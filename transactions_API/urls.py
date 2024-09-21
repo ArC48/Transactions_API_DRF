@@ -18,6 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import get_transactions, user_purchases, product_purchases
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,4 +28,6 @@ urlpatterns = [
         "product-purchases/<int:item_code>/",
         product_purchases,
     ),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("api/schema/docs/", SpectacularSwaggerView.as_view(url_name="schema")),
 ]

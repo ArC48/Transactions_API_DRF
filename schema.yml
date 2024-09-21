@@ -1,0 +1,62 @@
+openapi: 3.0.3
+info:
+  title: Transactions API
+  version: 0.0.0
+paths:
+  /product-purchases/{item_code}/:
+    get:
+      operationId: product_purchases_retrieve
+      parameters:
+      - in: path
+        name: item_code
+        schema:
+          type: integer
+        required: true
+      tags:
+      - product-purchases
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /transactions/:
+    get:
+      operationId: transactions_retrieve
+      tags:
+      - transactions
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /user-purchases/{user_id}/:
+    get:
+      operationId: user_purchases_retrieve
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - user-purchases
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
