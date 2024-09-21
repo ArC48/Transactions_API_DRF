@@ -11,7 +11,12 @@ class TransactionSerializer(serializers.ModelSerializer):
             "TransactionTime",
             "ItemCode",
             "ItemDescription",
-            "NumberOfItemPurchased",
+            "NumberOfItemsPurchased",
             "CostPerItem",
             "Country",
         ]
+
+
+class PurchaseSerializer(serializers.Serializer):
+    date = serializers.CharField()
+    total_items = serializers.IntegerField()

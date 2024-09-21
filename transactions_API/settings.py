@@ -36,14 +36,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "rest_framework",
-    "transactions_API",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # external packages
+    "rest_framework",
+    # internal apps
+    "transactions_API",
 ]
 
 MIDDLEWARE = [
