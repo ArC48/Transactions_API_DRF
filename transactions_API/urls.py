@@ -17,6 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from .views import get_transactions
+from .views import get_transactions, user_purchases
 
-urlpatterns = [path("admin/", admin.site.urls), path("transactions/", get_transactions)]
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("transactions/", get_transactions),
+    path("user-purchases/<int:user_id>/", user_purchases),
+]
